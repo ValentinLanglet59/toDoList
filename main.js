@@ -5,29 +5,20 @@ const submitEl = document.getElementById("input-todos-submit")
 const todosWrapper = document.querySelector(".todos-wrapper")
 
 
-submitEl.addEventListener("click", function (event) {
-    if (event === "click") {
-        const toDo = inputEl.value;
-    }   if (toDo != " ") {
-        addTodo(toDo);
-    }
-    inputEl.value = " ";
+submitEl.addEventListener('click', function () {
+    event.preventDefault();
+    const li = document.createElement('li')
+    li.innerText = inputEl.value
+    todosWrapper.appendChild(li)
+    li.classList.add("todo-element")
+    inputEl.value = ""
+    li.addEventListener('click', function() {
+        li.style.textDecoration = "line-through";
+    })
+    li.addEventListener("dblclick", function() {
+        todosWrapper.removeChild(li)
+    })
 })
-
-function addTodo (toDo) {
-    const text =  `<div id="todo-element">
-                        <li id="todo-description">${toDo}</li>
-                        <div id="input-wrapper">
-                            <input type="button" value="Modify" id="todo-modify">
-                            <input type="button" value="Delete" id="todo-delete">
-                        </div>
-                   </div>
-                  `
-    todosWrapper.insertAdjacentHTML("afterbegin", text)
-}
-addTodo("Manger")
-addTodo("Boire")
-
 
 
 

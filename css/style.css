@@ -57,27 +57,22 @@ input {
     transition: 250ms ease;
 }
 
-li {
-    text-decoration: none;
-    list-style: none;
-}
-
 .todos-wrapper {
     padding-top: 60px;
     margin: 0 auto;
 }
 
-#todo-element {
+.todo-element {
     display: flex;
     align-items: center;
     justify-content: space-around;
     border-radius: 5px;
     color: white;
     padding: 8px 8px;
-    border: 1px solid rgb(91,101,118);
+    cursor: pointer;
 }
 
-#todo-modify {
+.todo-modify {
     color: rgb(91,101,118);
     background-color: lightgray;
     padding: 6px;
@@ -86,7 +81,7 @@ li {
     
 }
 
-#todo-delete {
+.todo-delete {
     color: rgb(91,101,118);
     background-color: lightgray;
     padding: 6px;

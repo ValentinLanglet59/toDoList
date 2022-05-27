@@ -1,5 +1,3 @@
-const modifyBtn = document.getElementById("todo-modify");
-const deleteBtn = document.getElementById("todo-delete")
 let inputEl = document.getElementById("input-todos-text")
 const submitEl = document.getElementById("input-todos-submit")
 const todosWrapper = document.querySelector(".todos-wrapper")
